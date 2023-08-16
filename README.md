@@ -15,12 +15,14 @@ that allows us to sparsely sample spectra of the scene. We first super-pixelate 
 each super-pixel. We then fuse the RGB image with the sparse set of spectral profiles to obtain a high spatial and spectral resolution hyperspectral image at video-rate. Our lab prototype was capable of capturing **600x900 spatial images over 68 bands in 400nm - 700nm at 18 frames per second**
 
 ## Paper
-Coming soon
+Download the arXiv version from [here](https://arxiv.org/pdf/2012.14495.pdf)
 
 ## Code
 We have provided scripts to reconstruct using both our rank-1 approach and learned filter-based approach.
 
 ### Requirements
+Check `requirements.txt` for installing requirements using `pip`
+
 - Python 3.5 or newer
 - Pytorch
 - Numpy
@@ -38,7 +40,19 @@ You will need a comopiled version of `cassi_cp.pyx` to use our rank-1 reconstruc
 *Coming soon*
 
 ### Demo
-*Coming soon*
+Check `demo.py` to run a simulated example
+
+Download data from [here](https://www.dropbox.com/scl/fo/3e3veejokqtdsu7v81167/h?rlkey=934x7mvnurt41jufrcamjvkmr&dl=0) and place in `path/to/this/folder/data/sample`
+
+The content of the folder should be:
+
+`data/sample`
+
+`|_sample.mat`
+
+`|_display_info.mat`
+
+This sample file is a modified version of a hyperspectral image from the [KAIST dataset](http://vclab.kaist.ac.kr/siggraphasia2017p1/kaistdataset.html)
 
 ## High spatial resolution dataset
 We collected hyperspectral images of several scenes with our lab prototype including colorful toys, bojects with complex spatial texture, and microscopic images. We used some of the images for training the learned filter-based reconstruction approach.
